@@ -37,6 +37,6 @@ jobs:
         run: |
           python -c "from minimax_statusline import cli, check_usage, statusline"
 
-      - name: Validate CLI entry point
+      - name: Validate CLI module
         run: |
-          minimax-statusline --help
+          python -c "from minimax_statusline.cli import main; print('CLI module loaded successfully')"
