@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minimax-statusline"
+version = "1.0.0"
+description = "Display MiniMax token usage directly in your Claude Code statusline"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Juninho Sal", email = "junior.salgado@outlook.com"}
+]
+keywords = ["minimax", "claude", "claude-code", "statusline", "token-usage"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28.0",
+    "python-dotenv>=0.19.0",
+]
+
+[project.scripts]
+minimax-statusline = "minimax_statusline.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/juninhosal/minimax-claude-statusline"
+Repository = "https://github.com/juninhosal/minimax-claude-statusline"
+Issues = "https://github.com/juninhosal/minimax-claude-statusline/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
