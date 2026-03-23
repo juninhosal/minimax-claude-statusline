@@ -67,3 +67,23 @@ Configure in Claude Code `settings.json`:
   }
 }
 ```
+
+## Git Workflow
+
+**Branch protection:** The `main` branch is protected - no direct commits allowed.
+
+**For any change:**
+1. Create a new branch from `main`
+2. Make changes in the branch
+3. Create a Pull Request on GitHub
+4. After merge to `main`, delete the branch
+
+**Commands:**
+```bash
+# Create and switch to new branch
+git checkout -b feature/my-change
+
+# After changes and commit
+git push origin feature/my-change
+# Then create PR via GitHub UI
+```
