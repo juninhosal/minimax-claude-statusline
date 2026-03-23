@@ -8,11 +8,11 @@ Usage:
     python -m minimax_statusline.check_usage [model_name]
 
     # Example:
-    python -m minimax_statusline.check_usage MiniMax-M2.7
+    python -m minimax_statusline.check_usage MiniMax-M*
 
 Environment variables:
     MINIMAX_API_KEY       Your MiniMax API key (required)
-    MINIMAX_MODEL         Model name to filter (default: MiniMax-M2.7)
+    MINIMAX_MODEL         Model name to filter (default: MiniMax-M*)
     MINIMAX_ENV_PATH      Path to .env file (optional)
 """
 
@@ -146,7 +146,7 @@ def main():
     # Load .env first so MINIMAX_MODEL is available
     api_key = load_api_key()
     model_name = os.getenv("MINIMAX_MODEL") or (
-        sys.argv[1] if len(sys.argv) > 1 else "MiniMax-M2.7"
+        sys.argv[1] if len(sys.argv) > 1 else "MiniMax-M*"
     )
     target = get_model_data(api_key, model_name)
     print(format_usage(target, model_name))
