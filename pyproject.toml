@@ -9,7 +9,7 @@ description = "Display MiniMax token usage directly in your Claude Code statusli
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Juninho Sal", email = "junior.salgado@outlook.com"}
+    {name = "Junior Salgado", email = "junior.salgado@outlook.com"}
 ]
 keywords = ["minimax", "claude", "claude-code", "statusline", "token-usage"]
 classifiers = [
