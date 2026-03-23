@@ -51,19 +51,19 @@ pip install .
 ### Check usage manually
 
 ```bash
-# Uses default model (MiniMax-M2.7)
+# Uses default model (MiniMax-M*)
 minimax-statusline
 
 # Specify a model
-minimax-statusline MiniMax-M2.5
+minimax-statusline MiniMax-M*
 
 # Or via environment variable
-MINIMAX_MODEL=MiniMax-M2.7 minimax-statusline
+MINIMAX_MODEL=MiniMax-M* minimax-statusline
 ```
 
 Output:
 ```
-[MiniMax-M2.7] 5H:8% used reset:2h30m | week:1% used reset:26h30m
+[MiniMax-M*] 5H:8% used reset:2h30m | week:1% used reset:26h30m
 ```
 
 ## Claude Code (Statusline) Integration
@@ -79,9 +79,9 @@ Edit `C:\Users\YOUR_USER\.claude\settings.json`:
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.minimax.io/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "your_token_here",
-    "ANTHROPIC_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_MODEL": "MiniMax-M*",
     "MINIMAX_API_KEY": "your_api_key_here",
-    "MINIMAX_MODEL": "MiniMax-M2.7"
+    "MINIMAX_MODEL": "MiniMax-M*"
   },
   "statusLine": {
     "type": "command",
@@ -94,12 +94,12 @@ Edit `C:\Users\YOUR_USER\.claude\settings.json`:
 
 Line 1: Claude Code conversation context
 ```
-MiniMax-M2.7  Context |######----| 65% used
+MiniMax-M*  Context |######----| 65% used
 ```
 
 Line 2: MiniMax plan usage
 ```
-[MiniMax-M2.7] 5H:8% used reset:2h30m | week:1% used reset:26h30m
+[MiniMax-M*] 5H:8% used reset:2h30m | week:1% used reset:26h30m
 ```
 
 ### Fields
@@ -155,10 +155,7 @@ This project works with both. The `/coding_plan/remains` endpoint returns Coding
 
 Token plans are shared across all text models:
 
-- `MiniMax-M2`
-- `MiniMax-M2.1`
-- `MiniMax-M2.5`
-- `MiniMax-M2.7`
+- `MiniMax-M*` - All MiniMax text models (use as filter)
 - `speech-2.8-hd`, `speech-2.8-turbo`, etc.
 - `music-2.0`, `music-2.5+`, etc.
 - `MiniMax-Hailuo-02-*` (video)
@@ -171,7 +168,7 @@ The script filters by the model you are currently using.
 ```json
 {
   "model_remains": [{
-    "model_name": "MiniMax-M2.7",
+    "model_name": "MiniMax-M*",
     "current_interval_total_count": 1500,
     "current_interval_usage_count": 1381,
     "remains_time": 7200000,
@@ -264,19 +261,19 @@ pip install .
 ### Verificar uso manualmente
 
 ```bash
-# Usa o modelo padrao (MiniMax-M2.7)
+# Usa o modelo padrao (MiniMax-M*)
 minimax-statusline
 
 # Especifica um modelo
-minimax-statusline MiniMax-M2.5
+minimax-statusline MiniMax-M*
 
 # Ou via variavel de ambiente
-MINIMAX_MODEL=MiniMax-M2.7 minimax-statusline
+MINIMAX_MODEL=MiniMax-M* minimax-statusline
 ```
 
 Saida:
 ```
-[MiniMax-M2.7] 5H:8% usado reset:2h30m | semana:1% usado reset:26h30m
+[MiniMax-M*] 5H:8% usado reset:2h30m | semana:1% usado reset:26h30m
 ```
 
 ## Integracao com Claude Code (Statusline)
@@ -292,9 +289,9 @@ Edite `C:\Users\SEU_USUARIO\.claude\settings.json`:
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.minimax.io/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "seu_token_aqui",
-    "ANTHROPIC_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_MODEL": "MiniMax-M*",
     "MINIMAX_API_KEY": "sua_api_key_aqui",
-    "MINIMAX_MODEL": "MiniMax-M2.7"
+    "MINIMAX_MODEL": "MiniMax-M*"
   },
   "statusLine": {
     "type": "command",
@@ -307,12 +304,12 @@ Edite `C:\Users\SEU_USUARIO\.claude\settings.json`:
 
 Linha 1: contexto da conversa do Claude Code
 ```
-MiniMax-M2.7  Context |######----| 65% used
+MiniMax-M*  Context |######----| 65% used
 ```
 
 Linha 2: uso do plano MiniMax
 ```
-[MiniMax-M2.7] 5H:8% usado reset:2h30m | semana:1% usado reset:26h30m
+[MiniMax-M*] 5H:8% usado reset:2h30m | semana:1% usado reset:26h30m
 ```
 
 ### Campos
@@ -368,10 +365,7 @@ Este projeto funciona com ambos. O endpoint `/coding_plan/remains` retorna dados
 
 O plano de tokens e compartilhado entre todos os modelos de texto:
 
-- `MiniMax-M2`
-- `MiniMax-M2.1`
-- `MiniMax-M2.5`
-- `MiniMax-M2.7`
+- `MiniMax-M*` - Todos os modelos de texto MiniMax (use como filtro)
 - `speech-2.8-hd`, `speech-2.8-turbo`, etc.
 - `music-2.0`, `music-2.5+`, etc.
 - `MiniMax-Hailuo-02-*` (video)
@@ -384,7 +378,7 @@ O script filtra pelo modelo que voce esta usando atualmente.
 ```json
 {
   "model_remains": [{
-    "model_name": "MiniMax-M2.7",
+    "model_name": "MiniMax-M*",
     "current_interval_total_count": 1500,
     "current_interval_usage_count": 1381,
     "remains_time": 7200000,

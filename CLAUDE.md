@@ -17,11 +17,11 @@ pip install .
 
 # Run CLI directly
 minimax-statusline
-minimax-statusline MiniMax-M2.7
+minimax-statusline MiniMax-M*
 
 # Run check_usage module
 python -m minimax_statusline.check_usage
-python -m minimax_statusline.check_usage MiniMax-M2.7
+python -m minimax_statusline.check_usage MiniMax-M*
 
 # Run statusline (used by Claude Code settings.json)
 python -m minimax_statusline.statusline
@@ -43,7 +43,7 @@ src/minimax_statusline/
 
 **Environment variables:**
 - `MINIMAX_API_KEY` - MiniMax API key (required)
-- `MINIMAX_MODEL` - Model name filter (default: MiniMax-M2.7)
+- `MINIMAX_MODEL` - Model name filter (default: MiniMax-M*)
 - `LANG` - Language: `en` (English) or `pt-BR` (Portuguese, default)
 - `MINIMAX_ENV_PATH` - Custom .env file path
 - `MINIMAX_STATUSLINE_CMD` - Custom command for check_usage in statusline mode
@@ -58,7 +58,7 @@ Configure in Claude Code `settings.json`:
 {
   "env": {
     "MINIMAX_API_KEY": "your_api_key",
-    "MINIMAX_MODEL": "MiniMax-M2.7",
+    "MINIMAX_MODEL": "MiniMax-M*",
     "LANG": "pt-BR"
   },
   "statusLine": {
